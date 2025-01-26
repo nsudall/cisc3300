@@ -1,0 +1,39 @@
+1. What is HTML? What does it do?
+    HTML is a markup language rather than a traditional programming language, meaning that
+    it uses tags and attributes to determine how documents/text should be formatted or
+    presented. It is largely used to provide the structure of web pages that users interact
+    with
+
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses
+structure to convey meaning and navigation options to the user.
+    Fordham's main heading is Fordham University in order to make clear to the user that
+    they are accessing Fordham's website. Also at the top of the page is a bar of links
+    to access other areas of fordham's website, which is a standard convention to aid
+    in usability. The first three news headings featured when first opening the page 
+    focus on Rose Hill Gym's 100th anniversary, which are displayed on top of a background
+    image of Keating Hall, which shows that Fordham values tradition and athletics, both 
+    of which are strong marketing points for attending Fordham. Below the headlines is a
+    paragraph pitching Fordham's location, courses, and opportunities. The website structures
+    the information in a hierarchy, displaying the strongest selling points first in order
+    to get users to consider applying/attending Fordham.
+
+3. What is an HTML element? Tag? Attribute?
+    Tags are containers that hold the text/content that will be formatted according to the 
+    tag type when HTML is interpreted. There are opening and closing tags to indicate the 
+    start and end of the content being formatted. An attribute provides additional information
+    to further alter the formatting of the content. An HTML element must include an opening tag, 
+    content, and a closing tag, but can also feature an attribute depending on the formatting. 
+    HTML elements are the building blocks of the website as a whole.
+
+4. What does it mean when an element has semantic meaning? And structural meaning?
+    Semantic meaning adds additional meaning to the elements, though it may not visually
+    appear different. This is important for users that use screen readers (which interpret
+    strong and bold differently despite appearing the same visually), search engine optimization,
+    readability for other developers, and browser compatibility. Structural meaning is the
+    purpose of an element to alter the format or appearance of the website, which may not have
+    any deeper meaning beyond aesthetics.
+
+5. What is the default behavior when submitting a HTML form?
+    The default behavior is to submit the form to the URL, which results in the input from 
+    the user being tacked on to the end of the URL.
+
