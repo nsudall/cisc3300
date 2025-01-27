@@ -1,0 +1,104 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>02-Text Notes</title>
+    </head>
+
+    <body>
+        <!--text size gets smaller with each one-->
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+
+        <!--paragraphs start on a new line and add a small buffer afterwards-->
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+
+        <!--bold and italic-->
+        <p>This <b>word</b> is bolded</p>
+        <p>This <i>word</i> is italic</p>
+
+        <!--sub and superscript-->
+        <p>This <sup>word</sup> is superscript</p>
+        <p>This <sub>word</sub> is subscript</p>
+
+        <!--White space collapsing
+            - multiple spaces and linebreaks in content text is ignored
+            - helpful to make code more readable (ie can break paragraphs into nice lines
+              rather than one giant line of code)
+        -->
+        <p> This        paragraph
+            will
+            look         normal.</p>
+
+        <!--empty elements
+            - do not have words between two tags, just one tag in format <tag />
+        -->
+            <!--line breaks-->
+            <p>on <br /> different <br /> lines</p>
+
+            <!--horizontal rule/line-->
+            <hr />
+
+        <!--semantic meanings
+            - The following elements should only be used if adding semantic meaning,
+              not solely for formating
+        -->
+            <!--Strong, appear as bold, shows importance-->
+            <p><strong>WARNING:</strong> This is dangerous</p>
+
+            <!--emphasis, appears as italics, add inflection to the word-->
+            <p>This <em>is</em> important</p>
+
+            <!--blockquote, entire paragraph, indents it-->
+            <blockquote cite="https://en.wikipedia.org/wiki/Takeshi_Ebisawa">
+                <p>Takeshi Ebisawa (born circa 1964) is the purported leader of a 
+                    transnational Japanese crime syndicate, known as the yakuza. He 
+                    gained international notoriety following his arrest and subsequent 
+                    guilty plea to charges involving the trafficking of nuclear 
+                    materials, narcotics, and weapons</p>
+            </blockquote>
+
+            <!--short quotes, automatically adds quotation marks (except on internet 
+                explorer so not often used)-->
+            <p>Clare Booth Luce said, <q cite="http://www.quotationspage.com/random.php">
+                Courage is the ladder on which all the other virtues mount.</q></p>
+
+            <!--abbreviations and acronyms, when hovered, title value will popup in a box 
+                to further explain the item-->
+            <p><abbr title="Fuck my Life">FML</abbr></p>
+
+            <!--cite, use on titles when referencing other works, will italize-->
+            <p><cite>Twilight</cite> by Stephenie Meyer is awesome</p>
+
+            <!--defining, when providing the definition of a new term, use around said term,
+                sometimes italizes depending on browser-->
+            <p>A <dfn>email</dfn> is an electronic letter</p>
+
+            <!--address, contains the page author's details, sometimes in italics 
+                depending on browser-->
+            <address>
+                <a href="mailto:nsudall@fordham.edu">nsudall@fordham.edu</a>
+                <p>411 East Fordham Road</p>
+            </address>
+
+            <!--insert, showing content thats been inserted into a document, underlined-->
+            <p>This <ins>word</ins> is new</p>
+
+            <!--delete, showing text that's been removed, strikethrough-->
+            <p>This <del>word</del> is old</p>
+
+            <!--outdated information that is not removed from website, strikethrough-->
+            <p>This <s>word</s> is outdated</p>
+
+            <!--<u> is being phased out, used to underline-->
+
+
+    </body>
+    
+</html>
