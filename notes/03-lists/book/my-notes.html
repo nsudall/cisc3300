@@ -1,0 +1,61 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>03-list notes</title>
+    </head>
+
+    <body>
+        <!--general
+            - li stands for list item
+            - indented by default
+            - list icon (numbers for ordered, bullets for unordered) can be changed using
+              CSS
+        -->
+        <!--ordered lists, numbered-->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+
+        <!--unordered lists, bullets-->
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+
+        <!--definition lists, series of terms and their definition, definition is 
+            indented, can have multiple terms for same defintion, or multiple definitions
+            same term-->
+        <!--dl defines list-->
+        <dl>
+            <!--dt defines term-->
+            <dt>Term 1</dt>
+            <!--dd defines definition-->
+            <dd>Definition 1</dd>
+            <dt>Term 2</dt>
+            <dd>Defintion 1.1</dd>
+            <dd>Defintion 1.2</dd>
+            <dt>Term 3</dt>
+            <dt>Term 4</dt>
+            <dd>Definition 3 and 4</dd>
+        </dl>
+
+        <!--Nested Lists, intended further than parent list, changes bullet point style-->
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+                <ul>
+                    <li>Subitem</li>
+                    <li>Subitem</li>
+                    <li>Subitem</li>
+                </ul>
+            <li>Item</li>
+        </ul>
+
+    </body>
+    
+</html>
