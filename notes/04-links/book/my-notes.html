@@ -1,0 +1,60 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>04-links notes</title>
+    </head>
+
+    <body>
+        <!--Basic link
+            - href provides the URL
+            - content is what is displayed to the user to click on
+        -->
+        <a href="https://www.wikipedia.org/" id="top">Wiki</a>
+        <br />
+
+        <!--Linking to other sites uses absolute URL, starts with domain name then path 
+            to specific page-->
+
+        <!--Linking other pages on same site
+            - uses relative URL (file name if in same directory or path to file)
+        -->
+        <a href="../outline.html">outline</a>
+        <br />
+        <a href="./examples/01-writing.html">example 1</a>
+        <br />
+
+        <!--Directory structure
+            - top level folder is the root directory
+            - index.html files are typically created if no specific file is mentioned
+              in the URL (aka only the directory), They should be created for every sub
+              directory and act as a local homepage
+        -->
+
+        <!--email-->
+        <a href="mailto:nsudall@fordham.edu">Email me</a>
+        <br />
+
+        <!--open in new window-->
+        <a href="https://www.wikipedia.org/" target="_blank">Wiki</a>
+        <br />
+
+        <!--linking to different part of same page
+            - use the id attribute on different sections of the page. 
+            - no two ids can be the same on the same page
+            - id must start with letter or underscore
+            -link starts with # followed by id name
+        -->
+        <a href="#top">Top</a>
+        <br />
+
+        <!--can use the same technique to link to a specific part of another page,
+            just tack on the # section at the end of the url-->
+        <a href="https://en.wikipedia.org/wiki/Portuguese_sweet_bread#toc-Variations">
+            Sweet bread Variations
+        </a>
+
+    </body>
+    
+</html>
