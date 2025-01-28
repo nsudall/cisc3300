@@ -1,0 +1,84 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>05-images notes</title>
+    </head>
+
+    <body>
+        <!--stock image sources
+            - www.istockphoto.com
+            - www.gettyimages.com
+            - www.veer.com
+            -www.fotolia.com
+        -->
+
+        <!--keep images in a folder-->
+
+        <!--adding images
+            - empty element
+            - must have src attribute (tells where to find folder)
+            - must have alt attribute (tells screen reader what the image is)
+                - if the image has no meaning, like a dividing line, alt attribute will
+                  have empty quotes
+            - can have title attribute for additional information, displays as a tooltip
+              when the user hovers
+        -->
+        <img src="./images/car.png" alt="A car windshield cover to take off snow and ice"
+        title="This is a present I got for Christmas" />
+
+        <!--Image size
+            - images take longer to load, giving the size allows the browser to set aside
+              that space and move on to the rest of the website will the image loads
+        -->
+        <img src="./images/car.png" alt="A car windshield cover to take off snow and ice"
+        width="200" height="200" />
+
+        <!--Image placement
+            - determined on the location in code
+            - block elements, like <p> and <h1> start on a new line, when an inline element 
+              is inside a block element, then it is not started on a new line
+        -->
+        <!--paragraph after the image-->
+        <img src="./images/car.png" alt="A car windshield cover" />
+        <p> aren't windshields pretty cool</p>
+
+        <!--paragraph alligns with bottom edge of image-->
+        <p><img src="./images/car.png" alt="A car windshield cover" />aren't 
+            windshields pretty cool</p>
+        
+        <!--paragraph is split around the image-->
+        <p>aren't windshields <img src="./images/car.png" alt="A car windshield 
+            cover" /> pretty cool</p>
+        
+        <!--use CSS to allign images-->
+
+        <!--image rules
+            - use correct image format
+                - use JPEG for many color variations
+                - use GIF or PNG for few colors (flat colors)
+                    - GIFs can have simple animations
+                    - can hold transparent images
+                - vector images use lines to draw logos, can be increased in size without losing
+                  image quality
+            - save as correct size, using html to resize can distort image and slow run time,
+              measure in pixels
+            - decreasing image size can spped up run time, increasing image size can result in
+              blurry images, not all images can be cropped without losing information
+        -->
+
+        <!--captioins
+            - <figure> element links image to the caption
+            - <figcaption> creates the caption
+        -->
+
+        <figure>
+            <img src="./images/car.png" alt="A car windshield cover" />
+            <br />
+            <figcaption>This is a present I got my dad for Christmas</figcaption>
+        </figure>
+
+    </body>
+    
+</html>
