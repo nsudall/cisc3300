@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>10-intro-CSS notes</title>
+        <!--SEE EXAMPLES FROM BOOK-->
+    </head>
+
+    <body>
+        <!--thinking about CSS
+            - imagine every element in a box, you can then apply style to shape that box
+              or alter the interior text
+            - CSS associates rules with HTML elements
+            - 2 parts of a rule
+                - selector which indicate the element the rule applies to, in front of 
+                  curly bracket
+                - declaration which makes the style change, inside curly bracket
+                    - 2 parts of declaration
+                        - property which indicates the aspect that is changed, 
+                          like font, or color, before colon
+                        - value, setting for the property, like arial or red, after colon
+                          followed by semi colon
+        -->
+
+        <!--external CSS
+            - <link> element can link to a seperate file that has all the style information
+                - in the head section, couple of attributes
+                - href, gives path to CSS file
+                - type, give type of document, should always be text/css
+                - rel, gives the relationship of the current page and linked page, should
+                  always be stylesheet
+                - can link multiple stylesheets, both need seperate link elements
+                    - some developers use one for presentation (font, colors), and another
+                      for layout
+                - good for multipage websites
+                    - allows all pages to be in same format
+                    - rules do not need to be repeated for each page
+                    - better orgainization
+                    - can change style by altering the one file rather than an internal sheet
+                      on each page
+        -->
+
+        <!--internal CSS
+            - can have style sheet in html file inside <style> element
+                - uses type attribute, value always text/css
+            - should not be used if webpage is more than one page
+            - good for small pages or quick tests to see how something may look
+        -->
+
+        <!--selectors
+            - case sensitive, must exactly match the element or identifyer 
+            - types
+                - universal *{}
+                    - applies to all elements
+                - type h1, h2, p {}
+                    - matches element names
+                - class .class-value{} or p.class-value{}
+                    - matches any element with class-value (first example), or type 
+                      element with class-value (second example, paragraphs with class-value)
+                - ID #id-value {}
+                    - matches an element with the ID-value
+                - Child li>a {}
+                    - matches elements with proper parent/child relation
+                    - in example, will style links in a list item, but not links anywhere else
+                - Descendant p a {}
+                    - matches any element of type within the parent type, doesn't matter number
+                      of elements in between
+                    - in example, any a within the p, even if the a is nested within other elements
+                - Adjacent sibling h1+p {}
+                    - matches elements of types that are next to each other
+                    - in example, targets first p after any h1, but not other p
+                - general sibling h1~p {}
+                    - matches elements that are sibling of another, does not have to be the
+                      direct preceding element
+                    - in example, two p elements siblings of h1 element, rule applies to both
+        -->
+
+        <!--cascade
+            - if multiple rules apply to the same element, this is how rule is chosen
+            1. add !important to property value
+                - overrides all other rules, avoid causes bugs
+            2. specificity
+                - the more specific selector gets priority
+                - ex: id selector overrides universal
+            3. last rule
+                - the rule declared later will override
+            - good stratagey is to start with most general default style, then override
+              where needed using the rules
+        -->
+
+        <!--Inheritance
+            - font and color properties inherit from parent to child
+            - background-color and border properties dont
+            - can force properties to inherit from their parent by making their value inherit
+                - ex: padding: inherit;
+        -->
+
+
+    </body>
+    
+</html>
