@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>07-forms notes</title>
+    </head>
+
+    <body>
+
+        <!--form structure
+            - will have action attribute, value is the URL for the page that recieves the
+              information on submission (will get into more when learning about PHP)
+            - Method attribute also used, two options
+                - get:
+                    - values added to the end of the URL
+                    - used for short forms and just retriving data from the web server, not
+                      sending information that should be added or deleted from a database
+                    - default if no method is declared
+                - post:
+                    - values sent in HTTP headers
+                    - used when users want to upload a file, the form is long, contains
+                      sensitive info like passwords, adds or deletes information from database
+            - looks like <form action="http://www.send-data-here.php" method="get or post">
+        -->
+
+        <!--dont have backend stuff right now so just using <form>-->
+        <form>
+            <!--input
+                - can take many types of input depending on attribute's values
+                - attributes
+                    - type
+                        - determines the type of input, multiple options
+                            - text, creates a single line text input
+                            - password, behaves like text but the characters
+                              are blocked out
+                                - not fully secure, should use Secure Sockets Layer (SSL) for sending
+                                  sensitive information 
+                            - radio, creates buttons to be selected
+                                - once value is selected, cannot deselect, only choose another option,
+                                  if want user to have option to choose none, use checkbox
+                            - checkbox, can select multiple (or no) options
+                            - file, allows user to upload a file, creates a text box and a browse button,
+                              when browse button is clicked, will allow user to select a file
+                                - method must be post
+                                - cannot control the appearance of the popup window to select a file
+                            - submit, will create button to send form to the server
+                                - use CSS to alter the style of the button
+                            - image, will make the submit button an image
+                                - requires the same image attributes as normal images
+                            - hidden, not shown on the page, can add information to the form that user
+                              will not see, like what page they were on when they submitted the form
+                            - date, will take a calendar date, not supported on older browsers, will just display
+                              text box
+                            - email, checks that input is in email format, older browsers display text box
+                            - url, checks that input is in url format, older browswer display text box
+                            - search, generates a search field, older browswer display text box
+                            
+                    - name
+                        - ids the input, needed so that you know which inputs are for which
+                          questions
+                        - should be the same value for all options in radio buttons and checkboxes
+                        - not needed but can be used for submit button
+                    - size
+                        - controls the length of the text box to see certain number of characters
+                        - out of date now, use CSS instead
+                    - maxlength
+                        - limits the length of the user input
+                    - value
+                        - used for radio buttons and checkboxes, value that is sent to server on 
+                          submission
+                        - should be different for each option in the set
+                        - will contol text on a submit button, should be used 
+                    - checked
+                        - used for radio button and checkboxes to give a default selection, optional, only 
+                          one option should have this value out of the set
+                    - required
+                        - used for form validation, checks if all the required fields are filled in
+                        - normally done through java script but new browsers support html method
+                    - placeholder
+                        - value is shown in text box until the user clickes on it, older browsers will
+                          not display the text
+            -->
+
+            <!--labeling
+                - make form acessable for visually impared users
+                - <label> element
+                    - wraps around the form control, opening tag, label, the form element
+                - for attribute
+                    - put ID attribute on the form control
+                    - create label element and add for attribute, for value should be same
+                      as ID value
+                    - label will go to the right of the control, good for radio buttons
+            -->
+
+            <!--Examples-->
+                <!--text input-->
+                <label>Username: <input type="text" name="username" size="15" maxlength="30" /> </label>
+                <!--password input-->
+                <label>Password: <input type="password" name="password" size="15" maxlength="30" /> </label>
+                <!--radio input-->
+                <p>Choose a Button:
+                    <br />
+                    <input id="one" type="radio" name="chosen" value="one" checked="checked" />
+                    <label for="one">One</label>
+                    <input id="two" type="radio" name="chosen" value="two" />
+                    <label for="two">Two</label>
+                    <input id="three"type="radio" name="chosen" value="three" />
+                    <label for="three">Three</label>
+                </p>
+                <!--checkboxes--> 
+                <p>Choose a Box (or multiple):
+                    <br />
+                    <input id="four" type="checkbox" name="picked" value="one" checked="checked" />
+                    <label for="four">One</label>
+                    <input id="five" type="checkbox" name="picked" value="two" />
+                    <label for="five">Two</label>
+                    <input id="six" type="checkbox" name="picked" value="three" />
+                    <label for="six">Three</label>
+                </p>
+                <!--upload-->
+                <label>upload something :
+                    <br />
+                <input type="file" name="user-upload" /> </label>
+                <!--hidden (example from book)-->
+                <input type="hidden" name="bookmark" value="lyrics" />
+                <br />
+                <!--required-->
+                <label for="needed">Input something: <br/> </label>
+                <input id="needed" type="text" name="needed" required="required" />
+                <br />
+                <!--date-->
+                <label for="date">Date: <br /></label>
+                <input id="date" type="date" name="date" />
+                <br />
+                <!--email-->
+                <label for="email">Email: <br /></label>
+                <input id="email" type="email" name="email" />
+                <br />
+                <!--url-->
+                <label for="url">URL: <br /></label>
+                <input id="url" type="url" name="url" />
+                <br />
+                <!--search and placeholder-->
+                <label for="search">Search: <br /></label>
+                <input id="search" type="search" name="search" placeholder="Type here" />
+                <input type="submit" value="search" />
+
+            <!--text area
+                - creates multiline text input area
+                - not an empty element and requires opening and closing tag
+                - Any text between those tags will be displayed in the text box,
+                  but the user must clear that text before entering their info
+                - has attributes
+                    - cols and rows
+                        - determines the size of the text box, cols for width, rows for height
+                        - outdated, use CSS now
+                    - name
+                        - same rules for input
+            -->
+            <br />
+            <br />
+
+            <label>User Review:
+                <br />
+            <textarea name="review" cols="20" rows="4">Enter here... </textarea> </label>
+
+            <!--select
+                - creates drop down menu with 2 or more options
+                - name attribute with same rules
+                - uses <option> element to create elements in the drop down menu,
+                  words between the opening and closing tag will appear in the drop down
+                    - will have value attribute, must be different for each option
+                    - can have selected attribute (same as checked),if attribute not given,
+                      first option will be used as the default
+                - similar to radio buttons, should be used when there are a lot of options
+            -->
+            <br />
+            <br />
+
+            <label>Choose an option:
+                <br />
+                <select name="select">
+                    <option value="one">One</option>
+                    <option value="two">Two</option>
+                    <option value="three">Three</option>
+                </select>
+            </label>
+
+            <!--multiple select
+                - can make the select box show more than one option by adding the size attribute
+                  to the select element
+                    - doesn't always work depending on the browser
+                - can allow users to choose multiple options by adding multiple attribute
+                  to the select element
+                    - should tell users they can choose multiple and remind them how to based on
+                      their computer
+            -->
+            <br />
+            <br />
+            <label for="mulioption">Choose one or more options:</label>
+            <br />
+            <select id="multioption" name="select" size="3" multiple="multiple">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
+
+            <br />
+            <br />
+
+            <!--submit button-->
+            <input type="submit" value="Press Here To Sell ur DATA" />
+
+            <br />
+            <br />
+
+            <!--image submit button-->
+            <input type="image" src="../../05-images/images/pc.jpg" width="50" height="50"/>
+
+            <br />
+            <br />
+
+            <!--button, can add image inside a button-->
+            <button><img src="../../05-images/images/pc.jpg" alt="pc" width="50" 
+                height="50" /> the is the pinecone button</button>
+            
+            <br />
+            <!--can group form elements together
+                - <fieldset> element groups, causes line drawn around the field
+                - <legend> element can be sed right after to label the field
+            -->
+            <fieldset>
+                <legend>Name</legend>
+                <label for="fname">First Name: <br /> </label>
+                <input id="fname" type="text" name="fname" />
+                <br />
+                <label for="lname">Last Name: <br /> </label>
+                <input id="lname" type="text" name="lname" />
+            </fieldset>
+
+
+
+
+        </form>
+
+    </body>
+    
+</html>
