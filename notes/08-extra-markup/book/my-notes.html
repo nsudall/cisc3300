@@ -1,0 +1,115 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>08-extra-markup notes</title>
+        <!--page information
+            - use <meta> tag
+            - goes in head
+            - had name and content attributes
+                - name is the property, content is the value (name="content" but not in that format)
+                - sometime uses http-equiv instead of name
+            - can help with search engines
+            - common info shared
+                - description (name)
+                    - used by search engines to understand the page, max 155 char, sometimes
+                      displayed in search engine results
+                - keywords (name)
+                    - words that a user may search to lead to my page
+                - robots (name)
+                    - indicates if search engines should add page to results
+                    - noindex means do not add to result
+                    - nofollow means include the current page, but not other pages that link
+                      to it
+                - author (http-equiv)
+                    - author name
+                - pragma (http-equiv)
+                    - prevents browser caching (storing locally for faster download on later visit)
+                - expires (http-equiv)
+                    - must give a date (special format), prevents browser from caching after the date
+        -->
+        <meta name="description" content="An Essay on Installation Art" />
+		<meta name="keywords" content="installation, art, opinion" />
+		<meta name="robots" content="nofollow" />
+		<meta http-equiv="author" content="Jon Duckett" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="Fri, 04 Apr 2034 23:59:59 GMT" />
+
+    </head>
+
+    <body>
+        <!--id attribute
+            - can be added to any element (global attribute)
+            - must start with underscore or letter
+            - value should be unique in each instance
+            - allows for elements of the same type to be styled differently
+        -->
+        <p id="paragraph1">Hey there</p>
+        <p id="paragraph2">Look here's another one</p>
+
+        <!--class attribute
+            - can classify multiple elements of different types
+            - one element can be a member of multiple classes, just seperate value with a space
+              ex: class="class1 class2"
+        -->
+        <p class="important">This is important</p>
+        <p>not important</p>
+        <h3 class="important ">This is also important</h3>
+
+        <!--block elements
+            - elements that always start on a new line
+            - ex: <h1> <p> <ul> <li>
+        -->
+
+        <!--inline elements
+            - elements that continue on the same line as neighboring element
+            - ex: <a> <b> <em> <img>
+        -->
+
+        <!--grouping text in a block
+            - use <div> element
+            - container, inside elements will be in block level box
+            - will start on a new line
+            - can add class or id attribute to formate the box
+        -->
+        <div id="block">
+            <h1>This is in the block</h1>
+            <p>So is this</p>
+        </div>
+
+        <!--grouping text inline
+            - use <span> element, same as div but for inline
+            - often used when applying multiple style attributes to section of text
+              within larger body of text
+            - often used with class or id attribute to explain the span or add style
+        -->
+        <p>Im gonna type a lot for <span id="do-stuff">no reason</span> so that there is
+            room for me to put in this element somewhere in the middle</p>
+
+        <!--iframe
+            - is like a window into another page, can be on the same website or a different
+              one, commonly used to display google maps
+            - <iframe> element requires some attributes
+                - src give url of the page that is supposed to be in the frame
+                - hieght and width for the window dimensions 
+                - scrollbars, not always supported, allows the user to move the page around
+                  the frame if the accessed page is larger than the window allocated
+                    - can take values yes/no to show/hide scrollbars or auto which only shows 
+                      them if needed
+                - frameborder, not always supported, value 0 means no border, 1 meand border
+                - seamless, new way if scrolling not wanted
+        -->
+        <iframe width="450" height="350" 
+        src="http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"></iframe>
+
+        <!--escape character
+            - certain characters reserved only for code like <>
+            - if you want to use them in the text, have to use little code
+            - ex < is &lt; or &#60;
+        -->
+        <p>&lt; &#60;</p>
+
+    </body>
+    
+</html>
