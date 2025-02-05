@@ -1,0 +1,24 @@
+1. What do the id and class attributes do? How are they alike and different?
+	The id and class attributes are used to classify elements. They are global attributes, meaning that they can be applied to any element. The id attribute must have a unique value for each instance, allowing for individual elements to be styled differently than other occurrences of the same element type. Class elements can have values that can apply to multiple elements, allowing for elements of different types to be styled the same. An element can have multiple class values assigned to it. 
+
+2. What are the parts of a CSS rule?
+There are 2 parts of a CSS rule: selector and declaration. The selector indicates which element the rule will apply to. The declaration is what dictates the style change decision. The declaration itself also has two parts. The property indicates the aspect of the element being changed, like font or color. The value indicates the setting the property is placed in. 
+
+3. Explain how CSS rules cascade.
+Rules with the !important property will be prioritized over all other rules. The next highest priority is specificity, with the most specific rule taking priority. For example, a rule applied to a specific id will take priority over general paragraph styling. The final priority would go to the last declared rule, which applies when two rules apply to the same specificity level.
+
+4. Contrast display: block, inline, inline-block.
+Display inline formats the element like any other inline element, meaning that height and width settings are ignored, like <span>. Display block formats the element like other block elements, such as <p>. It causes the element to start on a new line and take up the entire width of the screen. Display inline-block combines these two properties so that the element is treated as an inline element, but you are still able to alter the height and width values. 
+
+5. What are border, padding, and margin?
+The border is the outline of a box, defining the edges. Even if it is not visible, every box has a border. The padding refers to the spacing between the border and the internal text. Margin provides spacing on the outside of the box, and is typically used to space out two adjacent boxes. 
+
+6. Let’s improve our fake business webpage from the first homework:
+a. Make a full width header div with a centered row of links and a border. The links
+can route to ‘#’. Give the header a background color and the links a foreground
+color.
+b. Create a logo with a fancy font from google fonts and some color. And set a
+google font for the text of the rest of your webpage.
+c. Every item on the page should have adequate margin/padding.
+d. Try to think about the usability principles we have discussed in class; try to make
+The design choices increase the usability of the page.
