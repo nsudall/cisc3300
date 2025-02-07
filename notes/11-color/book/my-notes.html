@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>11-color notes</title>
+    </head>
+
+    <style>
+        /*color
+            - RGB
+                - 3 values from 0 to 255 represents the amount of red/green/blue
+            - Hex color
+                - translated the 3 numerical values into heidecimal values
+            - color names
+                - preloaded name values, not really used other than black and white
+            - HSL
+                - creates a color by specifing hue, saturation, and lightness
+                    - hue expressed using angle 0-360 (color wheel)
+                    - saturation adds grey, expressed in percentage (0% = fully grey)
+                    - lightness, how much white/black (0% = white, 100% = black, 50% = normal)
+            - When choosing colors
+                - low contrast is bad
+                    - ex: white text on light gray background
+                - High contrast is easier to read
+                    - can be hard for reading a lot of text
+                    - When text reversed(light text on dark screen), increase height 
+                      between lines and width of the font to make it easier to read
+                - Medium contrast
+                    - best for long text
+                        -ex: white text on dark grey, off-white on dark background
+        */
+        h1 {
+            color: rgb(16, 222, 69);
+        }
+
+        h2 {
+            color: #f62a0d
+        }
+
+        p {
+            color: darkgoldenrod
+        }
+
+        /*background color
+            - sets background for the "box" of the element
+            - can use any of the color setting methods
+            - no value defaluts as transparent (white unless the user has different browser
+              settings)
+                - need to set background to white for it to apply to all browsers
+        */
+        #background{
+            background-color: rgb(73, 88, 102);
+        }
+
+        /*opacity
+            - supported on newer browsers
+            - value between 0.0 and 1.0 (.5 = 50% opacity)
+            - 3 ways to do it
+                - opacity property
+                - rbga
+                    - same as rgb, additional value for opacity
+                - hsla
+                    - same ad hsl, additional value for opacity
+            - See book for example
+        */
+
+
+    </style>
+
+    <body>
+        <h1>RGB color</h1>
+        <h2>Hex color</h2>
+        <p>name color</p>
+
+        <h1 id="background">This has a background</h1>
+
+        <div><p class="one"></p></div>
+		<div><p class="two"></p></div>
+
+    </body>
+    
+</html>
