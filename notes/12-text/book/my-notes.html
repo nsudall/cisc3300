@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>12-text notes</title>
+    </head>
+
+    <style>
+        /*text
+        - sites typically use small set that are installed on most computers
+            - font stack
+                - list of fonts in order of preference, provides backups if the user
+                  does not have certain fonts installed
+            - computers normally have at least one font from each category, can specify the 
+              category after the specific font to load the default font in the smae category
+                - categories
+                    - serif, sans-serif, monospace, cursive, fantasy
+                - ex: font-family: Georgia, serif;
+        - try not to use more than 3 different fonts
+        */
+
+        /*font-family
+        - change font by giving font name as the value
+        - user must have the font installed on their computer
+        - can list options in order of preference seperated by a comma as backups
+            - end with generic font name
+        - put font name in double quotes if more than one word
+        */
+
+        /*font-size
+        - can change the size of the text
+        - default size is 16px, standard size for body text, make other text larger to 
+          be proportional
+            - pixels
+                - common, number folllowed by px
+                - roughly same size scale as pt
+            - percentages
+                - default is 16px, setting font size to 50% would be 8px
+                - percentages stack for child elements
+                    - ex: if div is set at 50% and p inside div is set at 50%, the text is now 4px
+            - ems
+                - unit of measure, 1em = the length of one m
+        */
+        h1 {
+            font-family: Impact, fantasy;
+            font-size: 32px;
+        }
+
+        h2 {
+            font-family: Arial, Verdana, Helvetica, sans-serif;
+            font-size: 125%;
+        }
+
+        p {
+            font-family: "Courier New", monospace;
+            font-size: 2em;
+        }
+
+        /*@font-face
+        - creates copy of the text file and will download on user's computer if they 
+          do not have it, ensures wanted font use
+        - ensure that you have the licence for the font
+        - multiple steps to implement this method
+            - font family
+                - gives name to the font so that can be used to style specific elements
+            - src
+                - gives path to the font
+            - format
+                - specifies the format the font is given in
+                - different browsers support different formats, for the font to work in all
+                  browsers, need it in all formats
+                - use www.fontsquirrel.com/fontface/generator
+                - provide formats in this order
+                    - eot, woff, ttf/otf, svg
+        - see book example
+        */
+
+        /*
+        - font-weight
+            - bold and normal
+        - font-style
+            - normal, italic, oblique
+                - italic is cursive version of text, oblique is just slanted
+        */
+
+        #bold {
+            font-weight: bold;
+        }
+
+        #normal {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #italic {
+            font-style: italic;
+        }
+
+        #oblique {
+            font-style: oblique;
+        }
+
+        /*uppercase and lowercase
+        - text-transform
+            - uppercase
+                - use letter spacing option to increase readability
+            - lowercase
+            - capitalize
+        */
+        #uppercase {
+            text-transform: uppercase;
+        }
+        #lowercase {
+            text-transform: lowercase;
+        }
+        #capital {
+            text-transform: capitalize;
+        }
+
+        /*
+        - text-decoration
+            - none
+                - removes any decoration (good for if the default is styled ex: links auto underlined)
+            - underline
+                - line underneath the text
+            - overline
+                - line over the top of the text
+            - line-through
+                - strikethrough
+            - blink
+                - text flashes on and off, not typically used, annoying
+                - doesnt work on all browsers
+        */
+        #none{
+            text-decoration: none;
+        }
+        #underline{
+            text-decoration: underline;
+        }
+        #overline{
+            text-decoration: overline;
+        }
+        #line-through{
+            text-decoration: line-through;
+        }
+        #blink{
+            text-decoration: blink;
+        }
+
+        /*
+        - line-height
+            - increases the spaces between lines in the text
+            - only done in em so that the line spacing is always proportional to the 
+              text size, if you increase the font size, then the spacing will also increase
+            - space between lines should be larger that space between words to keep the eyes moving
+              horizontally
+        */
+        #line-space{
+            line-height: 1.5em;
+        }
+
+        /*letter and word spacing
+        - letter-spacing and word-spacing  
+            - good for headers in all caps, increasing the spacing helps readablity
+            - normal text should not have altered spacing, harder to read
+            - values given in em and added on top of the default value
+        */
+        #letter-space{
+            letter-spacing: 0.5em;
+        }
+        #word-space{
+            word-spacing: 0.5em;
+        }
+
+        /*allignment
+        - text-allign
+            - horizontal allignment
+            - left, right, center, justify
+                - justify varies the spacing between words so that the text takes up
+                  the entire container
+        - vertical-align
+            - vertical alignment
+            - does not allow for putting text in the middle of a block element
+            - baseline, sub, super, top, text-top, middle, bottom, text-bottom
+                - can also take a length in pixels or ems, or percentage of line height
+        */
+        #left{
+            text-align: left;
+        }
+        #right{
+            text-align: right;
+        }
+        #center{
+            text-align: center;
+        }
+        #justify{
+            text-align: justify;
+        }
+
+        /*indent
+        - text-indent
+            - distance given in px or ems
+            - can be given a negative value to push elements off the browser window
+        */
+        #indent{
+            text-indent: 50px;
+        }
+
+        /*drop shadow
+        - text-shadow
+            - not supported in all browsers
+            - takes 3 lengths and color of drop shadow
+                - first length is how far left/right for the shadow
+                - second length is the distance top/bottom for the shadow
+                - third value gives level of blur
+                - last is the color of the drop shadow
+        */
+        #shadow{
+            text-shadow: 5px 5px 7px red;
+        }
+
+        /*
+        - can style the first letter or first line differently using pseudo-elements
+        */
+        #first:first-letter{
+            font-size: 300%;
+        }
+        #first:first-line{
+            font-weight: bold;
+        }
+
+        /*styling links
+        - can change style for reg and visited links using pseudo-elements
+        */
+        #link:link{
+            color: red;
+        }
+
+        #link:visited{
+            color: green;
+        }
+
+        /*responding to users
+        - hover, when mouse is over an element
+        - active, applies when it is activated by user, ex:changing button style when clicked
+        - focus, applies when a browser expects you to interact with an element
+            - see book example for this
+        */
+        #user:hover{
+            color: orange;
+        }
+        #user:active{
+            color: purple;
+        }
+
+        /*attribute selector allows you to create ruels for elements with specific attributes
+        - existance. []
+            -p[class] -> targets p elements with attribute class
+        - equality [=]
+            -p[class="value"] -> targets p elements with attribute class with value of value
+        - space [~=]
+            - p[class~="value"] -> targets p elements with attribute class with value of value 
+              present in the list of space seperated values
+        - prefix [^=]
+            - p[attr^"v"] -> targets p elements with an attribute that begins with d
+        - substring [*=]
+            - p[attr*"lu"] -> targets p elements with an attribute that contains substring lu
+        - sufix [$=]
+            - p[attr$"e"] -> targets p ellements with attribute that ends in e
+        */
+        
+
+    </style>
+    <body>
+        <h1>Fantasy</h1>
+        <h2>sans-serif</h2>
+        <p>monospace</p>
+
+        <p id="bold">This paragraph is bold</p>
+        <p id="normal">This paragraph is normal</p>
+
+        <p id="italic">This paragraph is italic</p>
+        <p id="oblique">This paragraph is oblique</p>
+
+        <p id="uppercase">This paragraph is uppercase</p>
+        <p id="lowercase">This paragraph is lowercase</p>
+        <p id="capital">this paragraph is capitalized</p>
+
+        <a id="none" href="#">This is a link that is not underlined</a>
+        <p id="underline">This paragraph is underlined</p>
+        <p id="overline">This paragraph is overlined</p>
+        <p id="line-through">This paragraph is line-throughed</p>
+        <p id="blink">This paragraph is blinking</p>
+
+        <p>This is a normal paragraph with normal line spacing. I have to keep typing
+            so that these words go onto the next line so that you can see the spacing.
+        </p>
+
+        <p id="line-space">This is a paragraph with increased line spacing. I have to keep typing
+            so that these words go onto the next line so that you can see the spacing.
+        </p>
+
+        <p id="letter-space">This paragraph has increased letter spacing</p>
+        <p id="word-space">This paragraph has increased word spacing</p>
+
+        <p id="left">This paragraph is left alligned</p>
+        <p id="center">This paragraph is centered</p>
+        <p id="right">This paragraph is right alligned</p>
+        <p id="justify">This paragraph is justified. I have to keep typing again to fill the
+            space so that the effect can be seen. it needs to be on more than one line so that
+            you can see how word spacing varies depending on the line
+        </p>
+
+        <p id="indent">This paragraph is indented</p>
+
+        <p id="shadow">This paragraph has a shadow</p>
+
+        <p id="first">This paragraph first letter and line are different. I have to keep typing again to fill the
+            space so that the effect can be seen. it needs to be on more than one line so that
+            you can see how word spacing varies depending on the line
+        </p>
+
+        <a href="#" id="link">click here</a>
+
+        <a href="#" id="user">click here</a>
+    </body>
+    
+</html>
