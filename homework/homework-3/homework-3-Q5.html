@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+
+            .raleway {
+            font-family: "Raleway", serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                /*box-sizing property allows us to include the padding and border in an element's total width and height*/
+                box-sizing: border-box;
+                font-family: Raleway;
+            }
+
+            .main-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+            }
+
+            .majors-container {
+                border-right: 1px solid #e7ebe7;
+                padding: 50px;
+            }
+
+            .info-container {
+                padding: 50px;
+            }
+
+            h1 {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                color: #900028;
+                font-weight: 300;
+                font-size: 3.125rem;
+                line-height: 1.2;
+                letter-spacing: -.03rem;
+            }
+
+            .top-nav-bar {
+                margin-top: 50px;
+            }
+
+            .top-nav-bar a {
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            .majors-container .majors-minors {
+                color: #900028;
+                font-weight: bold;
+                width: 250px;
+                margin-top: 15px;
+            }
+
+            .question-section {
+                background-color: #e9e9e9;
+                list-style-type: none;
+                padding: 10px;
+                width: 250px;
+                margin: 30px 0;
+                line-height: 2em;
+            }
+
+            .info-section {
+                margin-bottom: 20px;
+            }
+
+            .info-section p {
+                margin-bottom: 5px;
+            }
+
+            .quote-section p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .para-section p {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            .text-color{
+                color: #900028;
+            }
+
+            .img-block{
+                float: right;
+                margin-left: 2rem;
+                min-width: 30%;
+                max-width: 30%;
+            }
+
+            #CS-link{
+                color: #900028;
+            }
+
+            button {
+                color: white;
+                background-color: #900028;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 25px;
+                border: none;
+                cursor: pointer;
+                width: 250px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="majors-container">
+                <h3 class="majors-minors">Majors and Minors</h3>
+                <ul class="question-section">
+                    <li>What's Your Passion?</li>
+                    <li>Accelerated Degree Programs</li>
+                </ul>
+                <button>Majors and Minors</button>
+            </div>
+            <div class="info-container">
+                <div class="top-nav-bar">
+                    <a href="https://www.fordham.edu/">Home</a> &#x2f;
+                    <a href="https://www.fordham.edu/admissions-and-aid/">Admissions and Aid</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/">Undergraduate Admission</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/">Majors and Minors</a> &#x2f;
+                    <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/computer-science/" id="CS-link">Computer Science</a>
+                </div>
+                <h1>Computer Science</h1>
+                <div class="info-section">
+                    <p>Degree Options: Major, Minor</p>
+                    <p>Locations: Lincoln Center, Rose Hill</p>
+                    <p>Visit the <a href="https://www.fordham.edu/academics/departments/computer-and-information-science/" class="text-color">Computer and Information Science Department</a></p>
+                </div>
+                <div class="quote-section">
+                    <p>Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing, or simply using it. Be that person.</p>
+                </div>
+                <div class="para-section">
+                    <p><img src="./images/chip.jpg" alt="circuit board photo" class="img-block"/>It’s difficult to imagine life without computers when they’re so central to our information-driven global society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a degree in computer science from Fordham’s department of Computer and Information Sciences.</p>
+                    <p>The computer science major emphasizes science and technology, including software design and programming, computer architecture and functions, and the development of an ability to analyze and solve problems using the computer as a tool.</p>
+                    <p>Get inspired by the classes we offer: Programming, Bioinformatics, Robotics, Video Game Design, Cyber Security, Networking, Database Management, Health and Medical Informatics.</p>
+                    <p>Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.</p>
+                    <p>You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. We want you to excel in your field—and as a human being.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

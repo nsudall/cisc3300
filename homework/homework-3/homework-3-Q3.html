@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>HW 3 Question 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          
+            .flex-container {
+                display: flex;
+                align-items: center;
+            }
+            
+            .flex-item {
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+                background-color: rgb(57, 7, 74);
+            }
+            
+            @media screen and (min-width: 500px) {
+                .flex-container {
+                    flex-direction: row;
+                }
+            }
+            
+            @media screen and (max-width: 499px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+    </body>
+
+</html>

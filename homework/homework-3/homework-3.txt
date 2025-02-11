@@ -1,0 +1,12 @@
+1. Compare and contrast Flexbox and CSS grid, how are they alike and how are they
+different?
+    Both Flexbox and CSS grid are layout systems that help standardize layout implementation
+    Flexbox is a one-dimensional layout model, meaning that the boxes can either flow
+    vertically or horizontally. CSS grid, however, is 2 dimensional, allowing for a grid to be made
+    and boxes to fill certain grid-boxes. 
+
+2. What’s responsive design in web development and how do we implement it?
+    Resposive design allows for the layout of a webpage to alter depending on the screen
+    size and orientation. This is critical for webpages to be accessible from mobile devices
+    that often feature smaller screens that can be portrait or landscape. Bootstrap is a 
+    common framework for implementing mobile responsiveness.  

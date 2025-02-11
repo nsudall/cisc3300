@@ -1,0 +1,12 @@
+some css frameworks:
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://tailwindcss.com/
+https://bulma.io/
+https://materializecss.com/
+
+portfolio inspiration:
+https://www.rammaheshwari.com/
+https://bonhomme.lol/
+https://jhey.dev/
+https://meowni.ca/
+https://brittanychiang.com/
