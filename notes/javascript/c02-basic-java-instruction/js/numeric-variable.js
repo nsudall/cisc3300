@@ -4,7 +4,7 @@ var quantity;
 var total;
 
 // Assign values to the price and quantity variables.
-price = 5;
+price = 6;
 quantity = 14;
 // Calculate the total by multiplying the price by quantity.
 total = price * quantity;
