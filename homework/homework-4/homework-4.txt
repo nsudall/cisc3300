@@ -1,0 +1,60 @@
+1. How does an interpreted programming language differ from a compiled language?
+    interpreted languages require an interpreter to read and execute the code. Compiled languages require
+    a compile step, where a compiler translate the program into machine code. The translated code is then ran
+    to execute the program. Compiled languages tend to be faster by translating the file once, then running the
+    code rather than interpreted, which must translate everytime the code runs. Interpreted languages are more 
+    flexable and are plateform independant. 
+
+2. Contrast dynamically typed programming languages with statically typed ones. And
+contrast strongly typed programming languages with weakly typed ones.
+    Dynamic typing performs type checking at runtime, linking the type to the value. This allows for the type
+    of the variable to change throughout the variable's usage in the program. Statically typed languages link
+    the type to the variable and is preformed at compile time. This forces the variable type to stay the same
+    Weakly typed languages pay attention to different data types being used, but will convert data between types
+    in certain instances. Strong typed languages have compilers that strictly enforce data types
+
+3. What is the difference between var, let, and const when declaring variables in JS?
+    var is the classic method for declaring variables. It can be used to create either global or function scoped
+    variables and is redeclarable, meaning the value can be updated. Let and Const are newer methods. Both are block
+    scoped, but variables declared with let can be redlared and updated, whereas those declared with const stay the 
+    same
+
+4. What are anonymous functions? Higher order functions? Callback functions? First class
+functions?
+    Anonymous functions are functions without names. These functions are often temporary or only used once.
+    Higher order functions are larger functions that involve other functions, meaning that the larger function
+    takes another function as an argument, or the larger function returns another function as a return value.
+    In higher order functions, the smaller function that is passed as a argument is a callback function.
+    First class function means that functions are treated like variables. This allows for the creation of 
+    higher order functions since functions can be passed as arguments or used as a return value like a variable
+
+5. Define objects in JavaScript.
+    Objects are a collection of key-value pairs which are properties of the object. Objects can also have functions
+    known as methods.
+
+6. Loop through the cats array variable found here:
+https://github.com/cisc3300/SP25-lecture-code/blob/main/2-13-lecture/cats.js
+    a. if the cats adoption status is available add that cat’s name to a result array
+    b. create a new sentence about your newly adopted cats from your result array via
+    the join array function.
+
+7. Create a variable that sets a value via a ternary operator. Use Math.random() * 10, which
+will output a random number from 1 to 10, to set the variable’s value as a string of
+“greater than five!” if the output from Math.random() * 10 is greater than 5, and “less than
+five!” if the output is less than 5.
+
+8. Loop through the values of the cat object variable found here:
+https://github.com/cisc3300/SP25-lecture-code/blob/main/2-13-lecture/cats.js. Console.log
+the value of each property in the loop.
+
+9. Write two if statements, pick the correct comparison operator to have the first if
+statement equate an integer of 1 and a string of ‘1’ as true. And pick the correct
+comparison operator to have the second equate an integer of 1 and a string of ‘1’ as
+false.
+
+10. Using the map function create a new array via the cats array used in question 6. Pass
+the map function a callback function that accepts each element of the array as a
+parameter. Return the value of the name property of each object in the cats array
+concatenated with the string “ is cute!”. The output should be an array of “Charlie is
+cute!”, “Lily is cute!”, etc.
+Include questions 6-10 in a single JavaScript file or HTML file via a script tag.
