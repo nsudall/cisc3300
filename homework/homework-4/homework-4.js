@@ -83,7 +83,11 @@ replace = document.getElementById('Q7');
 replace.textContent = msg;
 
 //Question 8
-console.log(cats)
+for (let i = 0; i < cats.length; i++)
+{
+    console.log(cats[i].name)
+    console.log(cats[i].adoptionStatus)
+}
 
 //Question 9
 if(1 == '1')
