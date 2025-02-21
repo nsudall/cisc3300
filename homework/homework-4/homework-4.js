@@ -83,10 +83,9 @@ replace = document.getElementById('Q7');
 replace.textContent = msg;
 
 //Question 8
-for (let i = 0; i < cats.length; i++)
-{
-    console.log(cats[i].name)
-    console.log(cats[i].adoptionStatus)
+for(const property in cats) {
+    console.log(property)
+    console.log(cats[property])
 }
 
 //Question 9
