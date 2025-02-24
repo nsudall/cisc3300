@@ -1,0 +1,44 @@
+1. What is the DOM? What is meant by the DOM tree?
+    DOM stands for Document Object Model, which is a representation of the webpage
+    with elements being represented by nodes. This allows for scripts to interact with 
+    the page, changing structure, content, or style. The model takes on a tree structure
+    with nested elements appearing as child nodes in the tree. There are different node
+    types for different aspects of the webpage, like document node for the specific page,
+    element nodes for individual elements, attribute nodes for attributes applied to the 
+    elements, and text nodes for text.
+
+
+2. What is an XSS attack? How do they work? How can you guard against them?
+    An XSS attack is a Cross-Site Scripting Attack where a malicious user takes
+    advantage of a page using innerHTML by inserting malicious code that eventually
+    turns into HTML. This code could then be run for different users and used to attack
+    them. The best way to guard against this is limiting turning user input into html.
+    If input must be turned into html, you can still protect against attacks by parsing out
+    special characters (for example <>), so that malicious input code would not run.
+
+3. What is an event in JavaScript? What kind of events can you respond to with code?
+    Events are things that happen to elements, caused by interactions with the webpage.
+    There are 6 types of events that can be responded to: UI, Keyboard, Mouse, Focus, 
+    Form, and Mutation. UI events occur when 
+
+4. How does a DOM eventListener work? What are the parameters it is expecting?
+5. What is jQuery? Why use it? How do we load jQuery onto a page?
+6. What is AJAX? JSON? The HTTP method types and what they do?
+7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check
+if it’s in the right format, making use of the “validate” button.
+8. Create a webpage that contains an unordered list element which contains several list item
+elements. If a list item is clicked, change the color of it. Each list item should have a different
+color.
+9. Create a webpage that contains a button. Write jQuery code so that when the button is
+clicked an HTTP GET request is sent to a PHP backend. From the PHP backend(reference the
+php-project code found here:
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return a json encoded
+associative array of data pertaining to your fake business. Make sure that it has at least a name
+and a price. Use the response returned on the frontend to create a div element for each piece of
+data, show the name and price of each item and give the elements some style.
+10. Create a webpage that contains a form element with some input elements. Write jQuery
+code so that when the form is submitted an HTTP POST request is sent to a PHP backend.
+From the PHP backend(reference the php-project code found here:
+https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return an associative
+array with data for a success message that is JSON encoded. Use the response to create an
+HTML element that contains the message data, give it some proper styling.
