@@ -19,16 +19,54 @@
 3. What is an event in JavaScript? What kind of events can you respond to with code?
     Events are things that happen to elements, caused by interactions with the webpage.
     There are 6 types of events that can be responded to: UI, Keyboard, Mouse, Focus, 
-    Form, and Mutation. UI events occur when 
+    Form, and Mutation. UI events occur when the user interacts with the browser's
+    user's interface. UI Event examples include load, unload, and scroll. Keyboard
+    events occur when the user interacts with the keyboard, like when a key is pressed
+    or released. Mouse interactions occur when the user uses a mouse, trackpad, or 
+    touch screen, like clicking or double clicking. Focus events occur when an element
+    gains or looses focus, like focus or blur. Form events occur when a user uses a form,
+    like submit and input. Mutation events occur when the DOM structure changes, like 
+    when an element is created or destroyed
 
 4. How does a DOM eventListener work? What are the parameters it is expecting?
+    DOM eventListeners listen for an event by name, once the event happens, a function
+    is called to react to the event. Event listeners take a parameter which is the name
+    of the event to be listened for. It then calls a function which is automatically 
+    passed the event. The function outlines what should happen once the event occurs
+
 5. What is jQuery? Why use it? How do we load jQuery onto a page?
+    jQuery is a JavaScript library that stores common tasks as methods, streamlining
+    JavaScript programming. jQuery is loaded onto a page using A Content Delivery 
+    Network (CDN), or a link to the javascript file using the src attribute in a 
+    script element
+
 6. What is AJAX? JSON? The HTTP method types and what they do?
+    AJAX, or Asynchronous JavaScript And XML, and allows for pages to be updated 
+    asynchronously without reloading the entire page. This allows for a section of the 
+    page to update without blocking the rest of the script from running while the request
+    is processed. JSON is JavaScript object notation, which takes text data in object
+    format of attribute value pairs. The HTTP method types are get, post, put, patch, and 
+    delete. Get is used to retrieve data. Post is used when adding new information to a 
+    specified source, causing a change in that resource or creating a new resource. Put 
+    replaces all instances of a target resource and replace them with the request, similar 
+    to find and replace. Patch partially changes a resource, and delete deletes the resource
+
 7. Write some data in the JSON format. You can use this site https://jsonformatter.org/ to check
 if it’s in the right format, making use of the “validate” button.
+{
+  "name": "Jane Doe",
+  "age": "25",
+  "birthday": {
+    "day": "1st",
+    "month": "January",
+    "year": "2000"
+  }
+}
+
 8. Create a webpage that contains an unordered list element which contains several list item
 elements. If a list item is clicked, change the color of it. Each list item should have a different
 color.
+
 9. Create a webpage that contains a button. Write jQuery code so that when the button is
 clicked an HTTP GET request is sent to a PHP backend. From the PHP backend(reference the
 php-project code found here:
@@ -36,6 +74,7 @@ https://github.com/cisc3300/SP25-lecture-code/tree/main/2-20-lecture) return a j
 associative array of data pertaining to your fake business. Make sure that it has at least a name
 and a price. Use the response returned on the frontend to create a div element for each piece of
 data, show the name and price of each item and give the elements some style.
+
 10. Create a webpage that contains a form element with some input elements. Write jQuery
 code so that when the form is submitted an HTTP POST request is sent to a PHP backend.
 From the PHP backend(reference the php-project code found here:
