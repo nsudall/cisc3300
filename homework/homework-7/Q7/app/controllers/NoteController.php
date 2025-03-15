@@ -2,53 +2,58 @@
 
 namespace app\controllers;
 
-class NoteController {
-    public function showForm() {
-        $successMessage = '';
-        $errors = [];
-        $this->renderView($successMessage, $errors);
-    }
+class NoteController
+{
 
-    public function submitNote() {
-        $title = trim($_POST['title'] ?? '');
-        $description = trim($_POST['description'] ?? '');
-
+    public function saveNote() {
+        //get post data from our form post
+        //{name: 'pinecone', age: '14'}
+        $title = $_POST['title'] ?? null;
+        $description = $_POST['description'] ?? null;
         $errors = [];
 
-        if (strlen($title) < 4) {
-            $errors[] = "Title must be at least 4 characters long.";
+        //validate and sanitize name
+        if ($title) {
+            //sanitize, htmlspecialchars replaces html reserved characters with their entity numbers
+            //meaning they can't be run as code, this will stop an xxs attack
+            $title = htmlspecialchars($title);
+
+            echo ($title);
+            echo '<br>';
+            echo htmlspecialchars(htmlspecialchars($title));
+
+            //validate text length
+            if (strlen($title) < 3) {
+                $errors['title'] = 'title is too short';
+            }
+        } else {
+            $errors['title'] = 'title is required';
         }
 
-        if (strlen($description) < 11) {
-            $errors[] = "Description must be at least 11 characters long.";
+        //numbers
+        if ($description) {
+            if ($description < 10) {
+                $errors['description'] = 'description is too short';
+            }
+        } else {
+            $errors['description'] = 'description is required';
         }
 
-        $title = htmlspecialchars($title);
-        $description = htmlspecialchars($description);
-
-        $successMessage = empty($errors) ? "Note submitted successfully!" : '';
-
-        $this->renderView($successMessage, $errors);
-    }
-
-    private function renderView($successMessage, $errors) {
-        $html = file_get_contents('../public/views/note_form.html');
-
-        $html = str_replace('{{successMessage}}', $successMessage, $html);
-        $html = str_replace('{{errors}}', $this->formatErrors($errors), $html);
-
-        echo $html;
-    }
-
-    private function formatErrors($errors) {
-        if (empty($errors)) return '';
-
-        $errorHtml = '<div class="error"><ul>';
-        foreach ($errors as $error) {
-            $errorHtml .= "<li>$error</li>";
+        //if we have errors
+        if (count($errors)) {
+            http_response_code(400);
+            echo json_encode($errors);
+            exit();
         }
-        $errorHtml .= '</ul></div>';
-        return $errorHtml;
+
+        //we could save the data off to be saved here
+
+        $returnData = [
+            'title' => $title,
+            'description' => $description,
+        ];
+        echo json_encode($returnData);
+        exit();
     }
+
 }
-?>

@@ -1,14 +1,9 @@
 <?php
 
-require_once '../app/controllers/NoteController.php';
+require "../app/Router.php";
 
-use app\controllers\NoteController;
+use app\Router;
 
-$controller = new NoteController();
+$router = new Router();
+$router->handleRoutes();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $controller->submitNote();
-} else {
-    $controller->showForm();
-}
-?>

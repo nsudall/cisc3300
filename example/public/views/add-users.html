@@ -46,6 +46,7 @@
             $(document).ready(function () {
                 $('#users-form').on('submit', function (e) {
                     e.preventDefault();
+                    console.log(submitted);
                     var name = $('#name-input').val();
                     var age = $('#age-input').val();
                     var email = $('#email-input').val();
