@@ -42,20 +42,26 @@
                 $('#note-form').on('submit', function (e) {
                     e.preventDefault();
                     console.log("submitted");
-                    var title = $('#title-input').val();
-                    var description = $('#description-input').val();
+                    var titleInput = $('#title-input').val();
+                    var descriptionInput = $('#description-input').val();
+                    console.log(titleInput);
+                    console.log(descriptionInput);
                     $('#title-error').html('')
                     $('#description-error').html('')
 
                     const data = {
-                        title: title,
-                        description: description,
+                        title: titleInput,
+                        description: descriptionInput,
                     }
+
+                    console.log(data.title);
+                    console.log(data.description);
 
                     $.ajax({
                         url: 'http://localhost:8888/notes',
                         type: "POST",
-                        data: data,
+                        contentType: "application/json",
+                        data: JSON.stringify(data),
                         dataType: "json",
                         success: function (data) {
                             console.log(data);

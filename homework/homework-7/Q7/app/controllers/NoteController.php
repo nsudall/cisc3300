@@ -6,16 +6,12 @@ class NoteController
 {
 
     public function saveNote() {
-        $title = $_POST['title-input'] ?? null;
-        $description = $_POST['description-input'] ?? null;
+        $title = $_POST['titleInput'] ?? null;
+        $description = $_POST['descriptionInput'] ?? null;
         $errors = [];
-
+        
         if ($title) {
             $title = htmlspecialchars($title);
-
-            echo ($title);
-            echo '<br>';
-            echo htmlspecialchars(htmlspecialchars($title));
 
             if (strlen($title) < 3) {
                 $errors['title'] = 'title is too short';
@@ -25,7 +21,7 @@ class NoteController
         }
 
         if ($description) {
-            if ($description < 10) {
+            if (strlen($description < 10)) {
                 $errors['description'] = 'description is too short';
             }
         } else {
@@ -39,8 +35,8 @@ class NoteController
         }
 
         $returnData = [
-            'title' => $title,
-            'description' => $description,
+            'dataTitle' => $title,
+            'dataDescription' => $description,
         ];
         echo json_encode($returnData);
         exit();
