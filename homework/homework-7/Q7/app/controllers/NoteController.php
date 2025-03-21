@@ -6,10 +6,18 @@ class NoteController
 {
 
     public function saveNote() {
-        $title = $_POST['titleInput'] ?? null;
-        $description = $_POST['descriptionInput'] ?? null;
+        $title = $_POST['title'] ?? null;
+        $description = $_POST['description'] ?? null;
         $errors = [];
+        echo json_encode([
+            'debug' => [
+                'title' => $title,
+                'description' => $description
+            ]
+        ]);
+        exit(); 
         
+
         if ($title) {
             $title = htmlspecialchars($title);
 
