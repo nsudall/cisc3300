@@ -42,16 +42,16 @@
                 $('#note-form').on('submit', function (e) {
                     e.preventDefault();
                     console.log("submitted");
-                    var titleInput = $('#title-input').val();
-                    var descriptionInput = $('#description-input').val();
-                    console.log(titleInput);
-                    console.log(descriptionInput);
+                    var title = $('#title-input').val();
+                    var description = $('#description-input').val();
+                    console.log(title);
+                    console.log(description);
                     $('#title-error').html('')
                     $('#description-error').html('')
 
                     const data = {
-                        title: titleInput,
-                        description: descriptionInput,
+                        title: title,
+                        description: description,
                     }
 
                     console.log(data.title);
@@ -60,10 +60,10 @@
                     $.ajax({
                         url: 'http://localhost:8888/notes',
                         type: "POST",
-                        contentType: "application/json",
-                        data: JSON.stringify(data),
+                        data: data,
                         dataType: "json",
                         success: function (data) {
+                            console.log("success")
                             console.log(data);
                             $('#title-input').val('')
                             $('#description-input').val('')
@@ -76,6 +76,7 @@
                             )
                         },
                         error: function (data){
+                            console.log("error")
                             $('#data-container').html('')
                             $.each( data.responseJSON, function( key, value ) {
                                 if (key === 'title') {

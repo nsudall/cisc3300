@@ -9,6 +9,7 @@ class NoteController
         $title = $_POST['title'] ?? null;
         $description = $_POST['description'] ?? null;
         $errors = [];
+        /*
         echo json_encode([
             'debug' => [
                 'title' => $title,
@@ -16,7 +17,7 @@ class NoteController
             ]
         ]);
         exit(); 
-        
+        */
 
         if ($title) {
             $title = htmlspecialchars($title);
