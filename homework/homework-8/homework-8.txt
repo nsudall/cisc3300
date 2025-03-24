@@ -1,0 +1,42 @@
+1. What are sessions and cookies? What do they do?
+Cookies are how a browser save data about a user. The data is stored in a text file,
+which the server can then access via the $_COOKIE Superglobal. They should not hold
+sensitive information as they can be read by developer tools. Sessions store user
+data and preferences directly on the server. They can be used together to create login
+systems.
+
+2. What is SQL? MySQL? What are relational databases?
+SQL or Structured query language is the language used for creating and editing databases.
+MySQL is the relational database program we will be using that will carryout the SQL
+instructions to modify databases. Relational databases orgainize large collections of
+data by creating relationships between pieces of data.
+
+3. What is normalization in SQL?
+Normalization avoids duplicate data entries by using relationships to orgainize 
+columns and tables.
+
+4. What are primary and foreign keys?
+Primary keys are used to uniquly identify each row in the database. No two primary keys
+can be the same value in a single table. Foreign keys hold the value of a primary key
+from another table. This creates a relationship between the two tables
+
+5. Write statements to:
+    a. create a new database in phpmyadmin (or use the one from the in class
+    assignment)
+    b. create a notes table, include the following columns:
+        i. id, which should be an integer type, have space for 11 characters, not be
+            nullable, and auto increment, set the id column as the primary key
+        ii. title, which should be an varchar type, have space for 80 characters, and
+            not be nullable
+        iii. description, which should be an text type, not be nullable
+
+6. Write statements to
+    a. insert some data
+    b. update some data
+    c. delete some data
+
+7. Write queries to
+    a. select all notes and order them by name in reverse alphabetical order
+    b. select the second note in the table only, assume that you don’t know the ID
+        number of it
+    c. select all notes that have descriptions which contain vowels
