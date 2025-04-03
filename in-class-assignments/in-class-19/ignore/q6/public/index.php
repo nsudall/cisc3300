@@ -9,7 +9,6 @@ define('DBNAME', $env['DBNAME']);
 define('DBHOST', $env['DBHOST']);
 define('DBUSER', $env['DBUSER']);
 define('DBPASS', $env['DBPASS']);
-define('DBPORT', $env['DBPORT']);
 
 use app\controllers\UserController;
 
@@ -19,8 +18,9 @@ $uri = strtok($_SERVER["REQUEST_URI"], '?');
 //get uri pieces
 $uriArray = explode("/", $uri);
 //0 = ""
-//1 = users
-//2 = 1
+//1 = api
+//2 = users
+//3 = id
 
 
 //get all or a single user
@@ -55,3 +55,4 @@ include '../public/assets/views/notFound.html';
 exit();
 
 ?>
+

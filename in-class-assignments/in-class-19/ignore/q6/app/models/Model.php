@@ -15,7 +15,9 @@ abstract class Model {
     private function connect() {
 //      dsn: data source name
 //      some of these are optional
-        $dsn = "mysql:hostname=" . DBHOST .";dbname=" . DBNAME . ";port=" . DBPORT . ";";
+        $dsn = "mysql:hostname=" . DBHOST .";dbname=" . DBNAME . ";";
+
+        //$dsn mysql:hostname=localhost;dbname=university
 
         $options = [
             //we can set the error mode, to throw exceptions or PDO type errors
@@ -23,6 +25,8 @@ abstract class Model {
             //set the default fetch type to associative array
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ];
+
+        //['name'=>'pinecone'], ['name'=>'nathan']
 
         try {
             return new PDO($dsn, DBUSER, DBPASS, $options);
@@ -46,6 +50,7 @@ abstract class Model {
         return $statementObject->fetchAll();
     }
 
+    //this one uses prepared statements!
     public function fetchAllWithParams($query, $data = []) {
         $connection = $this->connect();
         //prepare statement - a query with any dynamic data subbed out with variables like :firstName

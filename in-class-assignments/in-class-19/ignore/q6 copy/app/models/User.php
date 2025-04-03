@@ -4,17 +4,17 @@ namespace app\models;
 
 class User extends Model {
 
-    public function getUsers($name) {
-        if ($name) {
-            $query = "select * from users WHERE name like :name";
-            return $this->fetchAllWithParams($query, ['name' => '%' . $name . '%']);
+    public function getUsers($username) {
+        if ($username) {
+            $query = "select * from posts WHERE username like :username";
+            return $this->fetchAllWithParams($query, ['username' => '%' . $username . '%']);
         }
-        $query = "select * from users";
+        $query = "select * from posts";
         return $this->fetchAll($query);
     }
 
     public function getUserById($id){
-        $query = "select * from users where id = :id";
+        $query = "select * from posts where id = :id";
         return $this->fetchAllWithParams($query, ['id' => $id])[0] ?? null;
     }
 }
