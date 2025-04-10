@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Items</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/assets/styles/items-view.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container margin-thirty pb-5">
+            <h2 class="text-center mb-4">Items</h2>
+            <div class="d-flex justify-content-center">
+                <div class="input-group mb-3" style="max-width: 600px; width: 100%;">
+                    <input id="search-text" type="text" class="form-control" placeholder="Search for an item" aria-label="Search box" aria-describedby="button-addon2">
+                    <button id="search-button" class="btn btn-primary" type="button">Search</button>
+                </div>
+              </div>
+            <div id="items-container" class="row margin-ten"></div>
+            <div class="text-center margin-thirty">
+                <a href="/items-add" class="btn btn-success">Add Items</a>
+            </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                $("#search-button").click(function () {
+                    const url = $('#search-text').val() ? `http://localhost:8888/api/items?search=${$('#search-text').val()}` : `http://localhost:8888/api/items`;
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        dataType: "json",
+                        success: function (data) {
+                            $('#items-container').html('')
+                            console.log(data)
+                            $.each( data, function( key, value ) {
+                                $('#items-container').append(`
+                                    <div class="col-md-6">
+                                        <div class="item-container mb-4">
+                                            <span class="item">
+                                                <h1>${value['name']}</h1>
+                                                <h3>${value['price']}</h3>
+                                                <p>Department: ${value['type']}</p>
+                                                <p>${value['description']}</p>
+                                            </span>
+                                            <span>
+                                                <a href="items-update/${value['id']}" class="btn btn-primary me-2">edit</a>
+                                                <a href="items-delete/${value['id']}" class="btn btn-danger">delete</a>
+                                            </span>
+                                        </div>
+                                    </div> 
+                                `)
+                            });
+                        }
+                    });
+                })
+            })
+
+
+        </script>
+
+    </body>
+</html>
